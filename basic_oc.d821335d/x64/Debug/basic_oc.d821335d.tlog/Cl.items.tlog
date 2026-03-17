@@ -1,0 +1,15 @@
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\app\main.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\main.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\app\viewer_gl.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\viewer_gl.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\core\camera.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\camera.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\core\math3d.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\math3d.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\core\mesh_bounds.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\mesh_bounds.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\geometry\mesh_edges.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\mesh_edges.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\geometry\mesh_prep.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\mesh_prep.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\geometry\occt_edges.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\occt_edges.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\geometry\shape_gen.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\shape_gen.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\geometry\shape_topology.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\shape_topology.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\rendering\edge_line_builder.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\edge_line_builder.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\rendering\gl_edge_lines.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\gl_edge_lines.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\rendering\gl_mesh.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\gl_mesh.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\src\rendering\shader_utils.cpp;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\shader_utils.obj
+C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\third_party\glad\src\glad.c;C:\Users\Beauvais\Desktop\basic_occt_gl_viewer\basic_oc.d821335d\x64\Debug\glad.obj
