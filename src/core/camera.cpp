@@ -271,13 +271,32 @@ Mat4 Camera::viewMatrix() const
 
 Mat4 Camera::projMatrix() const
 {
-    const float aspect  = static_cast<float>(m_viewWidth) / static_cast<float>(m_viewHeight);
-    const float halfW   = m_orthoHalfHeight * aspect;
-    const float halfH   = m_orthoHalfHeight;
+    const float aspect = static_cast<float>(m_viewWidth) / static_cast<float>(m_viewHeight);
 
-    return orthographic(
-        -halfW, halfW,
-        -halfH, halfH,
-        m_nearPlane, m_farPlane
-    );
+    if (m_orthographic)
+    {
+        // Existing orthographic projection
+        const float halfW = m_orthoHalfHeight * aspect;
+        const float halfH = m_orthoHalfHeight;
+
+        return orthographic(
+            -halfW, halfW,
+            -halfH, halfH,
+            m_nearPlane, m_farPlane
+        );
+    }
+    else
+    {
+        // New: perspective projection
+        // Derive matching FOV from current ortho half-height and camera distance so subject stays _roughly_ same size when toggling
+        const float dist = distance();
+        const float fovy = 2.0f * std::atan2(m_orthoHalfHeight, dist);
+
+        return perspective(fovy, aspect, m_nearPlane, m_farPlane);
+    }
+}
+
+void Camera::toggleProjection()
+{
+    m_orthographic = !m_orthographic;
 }

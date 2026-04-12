@@ -31,6 +31,9 @@ public:
 
     float distance() const;
 
+    void toggleProjection();
+    bool isOrthographic() const { return m_orthographic; }
+
 private:
     Vec3 eyePosition() const;
     Vec3 forwardDir() const;
@@ -69,4 +72,8 @@ private:
 
     float  m_dragStartPanX{ 0.0f };
     float  m_dragStartPanY{ 0.0f };
+
+    // New
+    bool  m_orthographic{ true };
+    float m_fovyRad{ 0.6f };        // (approx 34 degrees, gives a "CAD-like" FOV, hardcoded for now)
 };

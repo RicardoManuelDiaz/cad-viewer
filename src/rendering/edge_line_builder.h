@@ -1,13 +1,13 @@
 #pragma once
 
-#include "render_types.h"
+#include "core/render_types.h"
 
 #include <cstdint>
 #include <vector>
 
 struct EdgeLineVertex
 {
-    float clipX, clipY, clipZ, clipW;
+    float x, y, z;  // world-space position
     std::uint32_t ownerEdgeId;
 };
 
@@ -35,6 +35,4 @@ struct EdgeLineMeshCpu
     }
 };
 
-EdgeLineMeshCpu buildEdgeLineMesh(
-    const std::vector<EdgePolyline3D>& polylines,
-    const Mat4& viewProj);
+EdgeLineMeshCpu buildEdgeLineMesh(const std::vector<EdgePolyline3D>& polylines);

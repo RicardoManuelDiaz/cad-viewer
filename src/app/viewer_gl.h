@@ -1,3 +1,4 @@
 #pragma once
+#include <string>
 
-int runViewer();
+int runViewer(const std::string& exePath);

@@ -37,11 +37,14 @@
     <Filter Include="Header Files\rendering">
       <UniqueIdentifier>{a6d4f30c-3cf6-4a9a-b5b4-1b3a83acbca2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{dead64d7-aa1d-4659-9606-80a1fd8428c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Additional Dependencies">
+      <UniqueIdentifier>{7e982c7d-a4db-49f9-9e76-ce871b7c7db6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="third_party\glad\src\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\app\main.cpp">
       <Filter>Source Files\app</Filter>
     </ClCompile>
@@ -84,6 +87,18 @@
     <ClCompile Include="src\rendering\gl_edge_lines.cpp">
       <Filter>Source Files\rendering</Filter>
     </ClCompile>
+    <ClCompile Include="src\rendering\edge_quad_builder.cpp">
+      <Filter>Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rendering\gl_edge_quads.cpp">
+      <Filter>Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rendering\font_render.cpp">
+      <Filter>Source Files\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty-other\glad\src\glad.c">
+      <Filter>Additional Dependencies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\app\viewer_gl.h">
@@ -110,9 +125,6 @@
     <ClInclude Include="occt_edges.h">
       <Filter>Header Files\geometry</Filter>
     </ClInclude>
-    <ClInclude Include="edge_line_builder.h">
-      <Filter>Header Files\rendering</Filter>
-    </ClInclude>
     <ClInclude Include="src\core\camera.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
@@ -128,5 +140,28 @@
     <ClInclude Include="src\rendering\gl_edge_lines.h">
       <Filter>Header Files\rendering</Filter>
     </ClInclude>
+    <ClInclude Include="src\rendering\edge_line_builder.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rendering\edge_quad_builder.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rendering\gl_edge_quads.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rendering\font_render.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rendering\glfw_fullscreen_controller.h">
+      <Filter>Header Files\rendering</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="assets\Poppins-Regular.ttf">
+      <Filter>Assets</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "render_types.h"
+#include "core/render_types.h"
 
 #include <TopoDS_Edge.hxx>
 #include <TopoDS_Face.hxx>

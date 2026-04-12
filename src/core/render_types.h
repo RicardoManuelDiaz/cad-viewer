@@ -70,6 +70,7 @@ struct EdgePolyline3D
 struct EdgeQuadVertex
 {
     float clipX, clipY, clipZ, clipW;
+    float coverage;
     std::uint32_t ownerEdgeId;
 };
 

@@ -35,9 +35,6 @@ namespace
         const FaceInfo& faceInfo,
         EdgePolyline3D& out)
     {
-        if (BRepTools::IsReallyClosed(edgeInfo.edge, faceInfo.face))
-            return false;
-
         TopLoc_Location faceLoc;
         Handle(Poly_Triangulation) tri      = BRep_Tool::Triangulation(faceInfo.face, faceLoc);
         if (tri.IsNull())
@@ -71,7 +68,7 @@ namespace
             return false;
 
         // Detect closed loop by geometry
-        constexpr float closeTolSq = 1.0e-10f;
+        constexpr float closeTolSq = 1.0e-6f;
         if (out.points.size() >= 3 &&
             distSq(out.points.front(), out.points.back()) <= closeTolSq)
         {
@@ -108,6 +105,11 @@ std::vector<EdgePolyline3D> extractOcctEdgePolylines(const ShapeTopology& topolo
         {
             const FaceInfo* faceInfo = topology.findFace(faceId);
             if (!faceInfo)
+                continue;
+
+            // Skip this face if the edge is a seam on it - will appear twice with opposite orientations and polygon data is ambiguous
+            //  - try next adjacent face
+            if (BRepTools::IsReallyClosed(edgeInfo.edge, faceInfo->face))
                 continue;
 
             if (extractPolylineOnFace(edgeInfo, *faceInfo, polyline))

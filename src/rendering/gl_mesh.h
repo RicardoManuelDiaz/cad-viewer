@@ -2,7 +2,7 @@
 
 #include <glad/glad.h>
 
-#include "render_types.h"
+#include "core/render_types.h"
 
 struct GLMesh
 {

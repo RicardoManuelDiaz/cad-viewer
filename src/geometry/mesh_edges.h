@@ -4,7 +4,7 @@
 
 //EdgeMesh buildTriangleEdgeMesh(const RenderMesh& mesh);
 
-#include "render_types.h"
+#include "core/render_types.h"
 
 #include <vector>
 

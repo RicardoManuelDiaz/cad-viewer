@@ -26,21 +26,18 @@ bool uploadEdgeLineMesh(const EdgeLineMeshCpu& cpu, GLEdgeLineMesh& gpu)
         GL_DYNAMIC_DRAW
     );
 
+    // Attribute 0: world-space position (vec3)
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(
-        0,
-        4,
-        GL_FLOAT,
-        GL_FALSE,
+        0, 3, GL_FLOAT, GL_FALSE,
         sizeof(EdgeLineVertex),
-        reinterpret_cast<void*>(offsetof(EdgeLineVertex, clipX))
+        reinterpret_cast<void*>(offsetof(EdgeLineVertex, x))
     );
 
+    // Attribute 1: owner edge id (uint)
     glEnableVertexAttribArray(1);
     glVertexAttribIPointer(
-        1,
-        1,
-        GL_UNSIGNED_INT,
+        1, 1, GL_UNSIGNED_INT,
         sizeof(EdgeLineVertex),
         reinterpret_cast<void*>(offsetof(EdgeLineVertex, ownerEdgeId))
     );

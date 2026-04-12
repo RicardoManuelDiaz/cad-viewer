@@ -1,7 +1,7 @@
 #pragma once
-#include "render_types.h"
+#include "core/render_types.h"
 
-#include "shape_topology.h"
+#include "geometry/shape_topology.h"
 
 #include <vector>
 
