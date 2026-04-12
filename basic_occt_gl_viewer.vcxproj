@@ -196,6 +196,7 @@ xcopy /Y /D "$(ProjectDir)3rdparty-vc14-64\jemalloc-vc14-64\bin\jemalloc.dll" "$
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
